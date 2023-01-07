@@ -1,4 +1,27 @@
+ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+ 
+ 
+ul li {
+outline: 2px violet solid;
+display: list-item;
+list-style: none;
+padding: 10px;
+margin: 0 5px;
+}
 
+ul li:hover {
+outline: 2px deeppink solid;
+cursor: pointer;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #FFF;
+    overflow: hidden;
+}
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -12,6 +35,7 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
+  background-color: #ddd;
   color: black;
 }
 
@@ -24,7 +48,6 @@
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
-  margin-right: 25px;
 }
 .is-active {
     font-weight: bold;

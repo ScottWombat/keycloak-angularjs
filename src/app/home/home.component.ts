@@ -14,18 +14,12 @@ export class HomeComponent {
 
   public async ngOnInit() {
     this.isLoggedIn = await this.keycloak.isLoggedIn();
-
+    console.log('ddd')
     if (this.isLoggedIn) {
       this.userProfile = await this.keycloak.loadUserProfile();
     }
   }
-
-  public login() {
-    this.keycloak.login();
-  }
-
-  public logout() {
-    this.keycloak.logout();
-  }
+  
+  
 }
 

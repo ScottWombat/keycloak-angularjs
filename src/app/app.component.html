@@ -3,23 +3,23 @@
   <h1>
     <a [routerLink]="['/']">Angular Keycloak Example</a>
   </h1>
-  <ul>
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a [routerLink]="['/']">Home</a>
-    </li>
-    <li routerLinkActive="active"><a routerLink="/product">Product</a></li>
-    <li routerLinkActive="active"><a routerLink="/contact">Contact</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/about']">About</a></li>
-
-    <li><button class="btn">Login</button></li>
-    <li><button class="btn">Logout</button></li>
-  </ul>
+  <div class="topnav">
+    <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a [routerLink]="['/product']" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{exact: true}">Product</a>
+    <a [routerLink]="['/contact']" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{exact: true}">Contact</a>
+    <a [routerLink]="['/about']" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{exact: true}">About</a>
+    <div class="topnav-right">
+          <a [routerLink]="['/register']" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{exact: true}">Register</a>
+          <a href='#' (click)='logout()' *ngIf="isLoggedIn">Logout</a>
+          <a href='#' (click)='login()' *ngIf="!isLoggedIn">Login</a>
+         
+    </div>
+  </div>
 </nav>
 
-<div class="container">
+
+<div style="margin-top:100px">
   <div class="card">
-
     <router-outlet></router-outlet>
-
   </div>
 </div>

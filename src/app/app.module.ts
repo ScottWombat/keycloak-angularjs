@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
+import { RegisterComponent } from './register/register.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -32,7 +33,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
