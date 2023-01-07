@@ -1,0 +1,25 @@
+
+<nav class="navbar">
+  <h1>
+    <a [routerLink]="['/']">Angular Keycloak Example</a>
+  </h1>
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li routerLinkActive="active"><a routerLink="/product">Product</a></li>
+    <li routerLinkActive="active"><a routerLink="/contact">Contact</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['/about']">About</a></li>
+
+    <li><button class="btn">Login</button></li>
+    <li><button class="btn">Logout</button></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="card">
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
